@@ -1,0 +1,41 @@
+<div class="text-center card-header bg-dark">
+    <h3 class="text-white">Agregar Usuarios</h3>
+</div>
+<div class="container card-body bg-light">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form class="form my-4">
+                <div class="form-group">
+                    <label>UID</label>
+                    <input [(ngModel)]="usuario.tx_uid" class="form-control" name="tx_uid" type="text">
+                </div>
+                <div class="form-group">
+                    <label>User</label>
+                    <input [(ngModel)]="usuario.tx_user" class="form-control" name="tx_user" type="text">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input [(ngModel)]="usuario.tx_email" class="form-control" name="tx_email" type="text">
+                </div>
+                <div class="form-group">
+                    <label>Pass</label>
+                    <input [(ngModel)]="usuario.tx_pass" class="form-control" name="tx_pass" type="text">
+                </div>
+                <div class="form-group">
+                    <label>Rol</label>
+                    <input [(ngModel)]="usuario.tx_rol" class="form-control" name="tx_rol" type="text">
+                </div>
+                <div class="form-group">
+                    <label>Fullname</label>
+                    <input [(ngModel)]="usuario.tx_fullname" class="form-control" name="tx_fullname" type="text">
+                </div>
+                <div class="form-group">
+                    <label>Avatar</label>
+                    <input [(ngModel)]="usuario.tx_avatar" class="form-control" name="tx_avatar" type="text">
+                </div>
+                <input (click)="guardar(usuario)" class="btn btn-success mr-2" type="submit" value="Agregar">
+                <button (click)="cancelar()" class="btn btn-danger">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</div>

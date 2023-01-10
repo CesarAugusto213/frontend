@@ -1,0 +1,37 @@
+<div class="card-header bg-dark text-center">
+    <h3 class="text-white">Lista Usuarios</h3>
+</div>
+<button (click)="nuevo()" class="text-white btn btn-warning my-2">Agregar</button>
+<table class="table table-dark">
+    <thead>
+        <tr class="text-center">
+            <th>Id</th>
+            <th>UID</th>
+            <th>Usuario</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Rol</th>
+            <th>Nombre</th>
+            <th>Avatar</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuario of usuarios" class="text-center">
+            <td>{{usuario.id_user}}</td>
+            <td>{{usuario.tx_uid}}</td>
+            <td>{{usuario.tx_user}}</td>
+            <td>{{usuario.tx_email}}</td>
+            <td>{{usuario.tx_pass}}</td>
+            <td>{{usuario.tx_rol}}</td>
+            <td>{{usuario.tx_fullname}}</td>
+            <td>
+                <img src="{{usuario.tx_avatar}}" height="50px">
+            </td>
+            <td>
+                <button (click)="editar(usuario)" class="text-white btn btn-warning mr-2">Editar</button>
+                <button (click)="eliminar(usuario)" class="btn btn-danger">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
